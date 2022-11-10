@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>promise 02</title>
+<script type="text/javascript">
+	window.onload = function() {
+
+		var promise = new Promise(function(resolve) {
+			setTimeout(function() {
+				resolve('nice to meet u?') //=value
+			}, 3000);
+		});
+
+		promise.then(
+
+		function(value) {  //固定放resolve的value
+			document.getElementById("result").innerHTML = value;
+		});
+	}
+</script>
+</head>
+<body>
+	<div id=result></div>
+</body>
+</html>

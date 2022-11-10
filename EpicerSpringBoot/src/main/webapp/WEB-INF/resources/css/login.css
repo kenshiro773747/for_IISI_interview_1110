@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500;1,800&display=swap');
+
+.container{
+    position: relative;
+    max-width: 430px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0,0,0.1);
+}
+
+
+.container .form{
+    padding: 30px;
+}
+
+.container .form .title{
+    position: relative;
+    font-size: 27px;
+    font-weight: 600;
+}
+
+.form .title ::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background-color: red;
+    border-radius: 25px;
+}
+
+.form .inputfeild{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.inputfeild input{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 35px;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #ccc;
+    border-top: 2px solid transparent;
+    font-size: 16px;
+    transition: all 0.2s ease;
+} 
+
+.inputfeild input:is(:focus,:valid){
+    border-bottom-color:black;
+}
+
+.inputfeild i{
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    color:#999;
+    font-size: 23px;
+}
+
+.inputfeild input:is(:focus,:valid) ~ i{
+   color:black;
+}
+
+.inputfeild i.icon{
+    left: 0;
+}
+
+.inputfeild i.showhidepw{
+    right: 0;
+}
+
+.form .checkboxtext{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+
+}
+
+.checkboxtext .checkboxcontent{
+display: flex;
+align-items: center;
+}
+
+.checkboxcontent input{
+    margin: 0 8px -2px 4px;
+    accent-color: antiquewhite;
+}
+
+.form .text{
+    color: #333;
+    font-size: 14px;
+    
+}
+
+.form a.text{
+    color:aliceblue;
+   text-decoration: none;
+}
+
+.form a:hover{
+    text-decoration: underline;
+}
+
+.form .button{
+    margin-top: 35px;
+}
+
+.form .button input{
+    border: none;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 6px;
+    background-color: antiquewhite;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button input:hover{
+background-color: antiquewhite;
+}
+
+.form .loginsignup{
+    margin: 30px;
+    text-align: center;
+}
+
+.msg{
+	font-size: 14px;
+	color: red;
+	 font-weight: bolder;
+}

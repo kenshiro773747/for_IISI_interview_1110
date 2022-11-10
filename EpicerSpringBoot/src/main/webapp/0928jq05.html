@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>jq05</title>
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<script>
+	$(function() {
+	/*
+		$.get("getteacherjson", function(oo3) {
+			console.log(oo3);
+			console.log(oo3.teacherId+" "+oo3.teacherName);
+			
+			
+			var resultText = '';			
+			$("#result").html(resultText);
+		});*/
+		
+		
+		$.ajax({
+		 type:'GET',
+		 url:'getteacherjson',
+		 contentType:'text/html',
+		 dataType='json',
+		 success:function(data){
+			 console.log(data);
+		 }
+		});//ajax
+	});//底
+</script>
+<body>
+	<div id="result"></div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+ "<tr style='background-color:#FFD494'>"+
+						        "<div class='d-flex px-2 py-1'>"+
+						        "<td>"+
+						        "<button type='button' class='btn btn-primary' data-bs-toggle='modal' data-bs-target='#staticBackdrop'>"+(i+1)+
+						     " </button>"+
+						      <!-- Modal -->
+						      "<div class='modal fade' id='staticBackdrop' data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='staticBackdropLabel' aria-hidden='true'>"+
+						        "<div class='modal-dialog modal-dialog-scrollable'>"+
+						          "<div class='modal-content'>"+
+						          "  <div class='modal-header'>"+
+						             " <h5 class='modal-title' id='staticBackdropLabel'>"+data[i].title+"</h5>"+
+						            "  <button type='button' class='btn-close' data-bs-dismiss='modal' aria-label='Close'></button>"+
+						          "  </div>"+
+						           " <div class='modal-body'>"+
+						           data[i].articleContent+
+						           " </div>"+
+						           " <div class='modal-footer'>"+
+						            " <button type='button' class='btn btn-secondary' data-bs-dismiss='modal'>Close</button>"+
+						            "<form action='articleDetail' method='post'>"+
+									"<input type='hidden' name='articleId' value='"+data[i].articleId+"'>"+
+									"<button type='submit' class='btn bg-gradient-primary'>查看文章</button>"+
+									"</form>"+
+						           "</button>"+
+						           " </div>"+
+						         " </div>"+
+						       " </div>"+
+						    "  </div>"+
+						 "</div>"+

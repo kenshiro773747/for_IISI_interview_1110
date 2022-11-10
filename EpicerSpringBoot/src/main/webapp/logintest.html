@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Test</title>
+</head>
+<body>
+<form id="form1">
+<input type="text" name="name"><br>
+<input type="text" name="password"><br>
+<input type="submit" id="send" value="submit">
+</form>
+<script>
+window.onload= function(){
+	var form =document.getElementById('form1');
+    var send =document.getElementById('send');
+    send.addEventListener('click',function(e){
+    e.preventDefault();
+	var formdata = new FormData(form);
+	console.log(formdata.get("name"));
+ 	console.log(formdata.get("password"));
+    var xh = new XMLHttpRequest();
+	xh.open("POST","logintest",true);
+	xh.send(formdata);
+	
+	xh.onload=function(data){
+		console.log(data);
+	}	
+    });
+}
+	
+	
+	
+	
+
+
+
+
+
+</script>
+</body>
+</html>

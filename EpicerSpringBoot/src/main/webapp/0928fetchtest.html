@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>fetch test 0928</title>
+<script type="text/javascript">
+fetch('createteacherjson').then(function(response){
+			if(response.status != 200){
+				   console.log('response.status1:' + response.status);
+				   return;
+			   }
+			response.json().then(function(data){
+				   console.log('response.status2:' + response.status);
+				   console.log(data);			
+		});	
+		});
+</script>
+</head>
+<body>
+<div id="result"></div>
+</body>
+</html>

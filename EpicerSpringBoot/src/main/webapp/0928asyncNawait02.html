@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>as&aw</title>
+<script>
+window.onload = function(){
+	
+	async function play(){
+		var promise = new Promise(function(resolve){
+			resolve("have a nice day");
+			
+		});
+	document.getElementById("result").innerHTML = await promise;	
+	}
+	play();
+}
+
+
+
+</script>
+
+</head>
+<body >
+<div id="result">
+</div>
+</body>
+</html>

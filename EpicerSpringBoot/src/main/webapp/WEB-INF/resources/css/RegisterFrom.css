@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,500;1,800&display=swap');
+
+
+
+.msg{
+    font-size: 16px;
+    color: red;
+    font-weight: bolder;
+    }
+
+
+.container{
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    padding: 25px 30px;
+    border-radius: 5px;
+}
+
+.container .title{
+    font-size: 50px;
+    font-weight: 500;
+    position: relative;
+}
+
+.container .title::before{
+    content:'' ;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    background:linear-gradient(135deg,#71b7e6,#9b59b6)
+}
+
+.container form .userdetail{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .userdetail .inputbox{
+    margin-bottom: 15px;
+width: calc(100% /2 - 20px);
+}
+
+.userdetail .inputbox .detail{
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.userdetail .inputbox input{
+height: 45px;
+width: 100%;
+outline: none;
+border-radius: 5px;
+border: 1px solid #ccc;
+padding-left: 15px;
+font-size: 16px;
+border-bottom-width: 2px;
+}
+
+.userdetail .inputbox select{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding-left: 15px;
+    font-size: 16px;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    }
+
+    .userdetail .inputbox input:focus,
+    .userdetail .inputbox input:valid{
+        border-color: #9b59b6;
+    }
+
+    form .genderdetail .gendertitle{
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    form .genderdetail .category{
+        display: flex;
+        width: 80%;
+        margin: 14px 0;
+        justify-content: space-between;
+    }
+
+    form .genderdetail .category label{
+display: flex;
+align-items: center;
+font-size: 18px;
+    }
+
+.genderdetail .category .dot{
+    height: 18px;
+    width: 18px;
+    background-color:#d9d9d9;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+    
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two,
+#dot-3:checked ~ .category label .three
+{
+    border-color: #d9d9d9;
+    background-color: #9b59b6;
+}
+
+form input[type="radio"]{
+    display: none;
+}
+
+form .button{
+    height: 45px;
+    margin: 45px 0;
+}
+
+form .button input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    color: #fff0ff;
+    border: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    background:linear-gradient(135deg,#71b7e6,#9b59b6)
+}
+
+form .button input:hover{
+    background:linear-gradient(-135deg,#71b7e6,#9b59b6)
+}
+
+@media(max-width:584px) {
+    .container{
+        max-width: 100%;
+    }
+    form .userdetail .inputbox{
+        margin-bottom: 15px;
+        width: 100%;
+    }
+    form .genderdetail .category{
+        width:100%
+    }
+    .container form .userdetail{
+        max-height: 300px;
+        overflow: scroll;
+    }
+
+    .userdetail::-webkit-scrollbar{
+width: 0;
+    }
+}
+
